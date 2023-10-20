@@ -1,34 +1,7 @@
-# Veterinary
-
-Backend de una veterinaria para gestión administrativa con CSharp a través de estructura de 4 capas y code-first migration
 
 ## Comenzando 🚀
 
-El proyecto de desarrollo de software tiene como objetivo principal la creación de un sistema de administración para una veterinaria. Este sistema permitirá a los administradores y al personal de la veterinaria gestionar de manera eficiente y efectiva todas las actividades relacionadas con la atención de mascotas y la gestión de clientes.
-## Requerimientos funcionales
-1. Autenticación y autorización:
-    - El sistema debe implementar protección en los endpoints utilizando JWT (JSON Web Tokens). El token tiene una duracion de 1 minuto.
-    - Se debe implementar refresh token.
-    - Debe restringir las peticiones a los endpoints según los roles de los usuarios.
-2. Se debe permitir realizar procesos de creacion, edicion, eliminacion y listado de informacion de cada una de las tablas
-3. El backend debe permitir restringir peticiones consecutivos usando tecnicas de limitacion por IP.
-4. El backend debe permitir realizar la paginacion en  las peticiones get de todos los controladores.
-5. Los controladores deben implementar 2 versiones diferentes (Query y Header)
-
 ## EndPoints requeridos
-1.  Crear un consulta que permita visualizar los veterinarios cuya especialidad sea Cirujano vascular.
-2.  Listar los medicamentos que pertenezcan a el laboratorio Genfar
-3.  Mostrar las mascotas que se encuentren registradas cuya especie sea felina.
-4.  Listar los propietarios y sus mascotas.
-5.  Listar los medicamentos que tenga un precio de venta mayor a 50000
-6.  Listar las mascotas que fueron atendidas por motivo de vacunacion en el primer trimestre del 2023
-7.  Listar todas las mascotas agrupadas por especie.
-8.  Listar todos los movimientos de medicamentos y el valor total de cada movimiento.
-9.  Listar las mascotas que fueron atendidas por un determinado veterinario.
-10. Listar los proveedores que me venden un determinado medicamento.
-11. Listar las mascotas y sus propietarios cuya raza sea Golden Retriver
-12. Listar la cantidad de mascotas que pertenecen a una raza a una raza. Nota: Se debe mostrar una lista de las razas y la cantidad de mascotas que pertenecen a la raza.
-
 
 ### Pre-requisitos 📋
 
@@ -126,29 +99,18 @@ El ratelimit define la cantidad de peticiones permitidas en el tiempo y sobrepas
 ## Endpoints ✌️🤘🆗😺🦝🐶🦄
 Los endpoints son de tipo GET, por lo que todos cuentan con su versión 1.0 y 1.1, para los ejemplos, las consultas se van a presentar con diferentes versiones:
 1. ``` http://localhost:5223/api/Veterinarian/cardiovascularSurgeonVeterinarian ``` <br>
-![image](https://github.com/yllensc/veterinaria-4capas-csharp/assets/117176562/19ae4e83-72f8-4e87-88f4-641c86c4c2fe)
+
 2. ``` http://localhost:5223/api/Laboratory/medicineByGenfar ``` <br>
-![image](https://github.com/yllensc/veterinaria-4capas-csharp/assets/117176562/ad86673a-2369-4949-aeb8-ca1c504da58a)
 3. ``` http://localhost:5223/api/Specie/petsBySpecieGato ``` <br>
-![image](https://github.com/yllensc/veterinaria-4capas-csharp/assets/117176562/e0b5aebf-102f-4960-a268-d636dceb92b0)
 4. ``` http://localhost:5223/api/Owner/ownersWithPets ``` <br>
-![image](https://github.com/yllensc/veterinaria-4capas-csharp/assets/117176562/b19bf23b-2920-4b77-9c49-3a21a282a055)
 5. ``` http://localhost:5223/api/Medicine/medicineWithLessThan600?search=Fenbendazol 10%  ``` <br>
-![image](https://github.com/yllensc/veterinaria-4capas-csharp/assets/117176562/bce49249-9a45-4a58-be9d-9fa5706139e4)
 6. ``` http://localhost:5223/api/Appointment/petsOn2023On4forHerida en la pata ``` <br>
-![image](https://github.com/yllensc/veterinaria-4capas-csharp/assets/117176562/85e57941-6124-4a5b-8677-70159aa0f623)
 7. ``` http://localhost:5223/api/Specie/speciesOnGroups?search=Perro ``` <br>
-![image](https://github.com/yllensc/veterinaria-4capas-csharp/assets/117176562/a795c917-ef30-44a2-a3f2-8d44df1025d9)
 8. ``` http://localhost:5223/api/MedicineMovement/listMovementsWithTotal ``` <br>
-![image](https://github.com/yllensc/veterinaria-4capas-csharp/assets/117176562/18a99874-88f1-4ca6-8ecf-f6f0a8abee89)
 9. ``` http://localhost:5223/api/Appointment/petsCaredByVeterinarian2?search=Daisy ``` <br>
-![image](https://github.com/yllensc/veterinaria-4capas-csharp/assets/117176562/1cb26e09-3e43-4905-be9b-064ee306295c)
 10. ``` http://localhost:5223/api/Medicine/providerWithThisAmpicilina 500mg ``` <br>
-![image](https://github.com/yllensc/veterinaria-4capas-csharp/assets/117176562/b1f2a240-150e-47c0-96de-8501d263f7f2)
 11. ``` http://localhost:5223/api/Pet/petsWithThisBudgerigar ``` <br>
-![image](https://github.com/yllensc/veterinaria-4capas-csharp/assets/117176562/b540321a-a498-4a41-9732-2b04d32ca4b2)
 12. ``` http://localhost:5223/api/Pet/countPetsByRace ``` <br>
-![image](https://github.com/yllensc/veterinaria-4capas-csharp/assets/117176562/f4bbfa9c-887c-402a-800e-340c276bdcc8)
 
 
 
